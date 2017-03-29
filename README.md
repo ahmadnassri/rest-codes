@@ -2,6 +2,10 @@
 
 > Automatically generated HTTP Status Code badges for your API documentation, CDN delivery through Cloudflare, Open Source
 
+## Gallery
+
+View the full gallery [here](https://rest.codes)
+
 ![](https://rest.codes/square/code/200.svg)
 ![](https://rest.codes/square/code/301.svg)
 ![](https://rest.codes/square/code/400.svg)
@@ -11,10 +15,6 @@
 ![](https://rest.codes/square/full/301.svg)
 ![](https://rest.codes/square/full/400.svg)
 ![](https://rest.codes/square/full/500.svg)
-
-## Gallery
-
-View the full gallery [here](https://rest.codes)
 
 ## Usage
 
