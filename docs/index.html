@@ -1,5 +1,5 @@
 ---
-types:
+styles:
   - code
   - reason
   - full
@@ -90,7 +90,7 @@ themes:
 
       <p>Automatically generated HTTP Status Code badges for your API documentation, CDN delivery through Cloudflare, 100% <a href="https://github.com/ahmadnassri/rest-codes">Open Source</a></p>
 
-      <pre>https://rest.codes/&lt;theme&gt;/&lt;type&gt;/&lt;code&gt;.svg</pre>
+      <pre>https://rest.codes/&lt;theme&gt;/&lt;style&gt;/&lt;code&gt;.svg</pre>
 
       <p>Note: <code>.png</code> variant also available</p>
 
@@ -115,25 +115,25 @@ themes:
       <div>
         <a class="btn btn-default btn-ghost" href="#square"><img src="square/code/200.svg"/> Square</a>
         <a class="btn btn-default btn-ghost" href="#flat"><img src="flat/code/200.svg"/> Flat</a>
-        <a class="btn btn-default btn-ghost" href="#plastic"><img src="plastic/code/200.svg"/> Plastic</a>
+        <a class="btn btn-default btn-ghost" href="#plastic"><img src="plastic/code/200.svg" height="20"/> Plastic</a>
       </div>
 
       <br/>
 
       {% for theme in page.themes %}
         <div class="theme" id="{{ theme | downcase }}">
-          {% for type in page.types %}
-            <h3>Type: `{{ type }}`</h3>
+          {% for style in page.styles %}
+            <h3>Style: `{{ style }}`</h3>
 
-            <pre>https://rest.codes/{{ theme | downcase }}/{{ type }}/&lt;code&gt;.svg</pre>
+            <pre>https://rest.codes/{{ theme | downcase }}/{{ style }}/&lt;code&gt;.svg</pre>
 
-            {% if type == 'code' %}
+            {% if style == 'code' %}
               <div class="grid">
                 {% for status in site.data.statuses %}<div class="cell -1of12"><img title="/{{ theme | downcase }}/code/{{ status[0] }}" src="{{ theme | downcase }}/code/{{ status[0] }}.svg"/></div>{% endfor %}
               </div>
             {% else %}
               <div class="grid">
-                {% for status in site.data.statuses %}<div class="cell -4of12"><img title="/{{ theme | downcase }}/{{ type }}/{{ status[0] }}" src="{{ theme | downcase }}/{{ type }}/{{ status[0] }}.svg"/></div>{% endfor %}
+                {% for status in site.data.statuses %}<div class="cell -4of12"><img title="/{{ theme | downcase }}/{{ style }}/{{ status[0] }}" src="{{ theme | downcase }}/{{ style }}/{{ status[0] }}.svg"/></div>{% endfor %}
               </div>
             {% endif %}
 

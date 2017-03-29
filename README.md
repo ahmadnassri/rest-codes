@@ -19,7 +19,7 @@ View the full gallery [here](https://rest.codes)
 ## Usage
 
 ```
-https://rest.codes/<theme>/<type>/<code>.<svg|png>
+https://rest.codes/<theme>/<style>/<code>.<svg|png>
 ```
 
 ###### Example
