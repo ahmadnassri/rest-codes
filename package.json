@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "version": "0.0.0-development",
+  "name": "rest-codes",
+  "description": "Automatically generated HTTP Status Code badges for your API documentation, CDN delivery through Cloudflare, 100% Open Source",
+  "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
+  "homepage": "https://github.com/ahmadnassri/rest-codes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadnassri/rest-codes.git"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": ">=7"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/rest-codes/issues"
+  },
+  "dependencies": {
+    "canvas": "^1.6.5",
+    "librsvg": "^0.7.0"
+  }
+}
