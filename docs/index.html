@@ -44,11 +44,11 @@ themes:
         margin-right: 10px;
       }
 
-      .theme:not(:target) {
+      .theme {
         display: none;
       }
 
-      .theme:target {
+      .theme.active {
         display: block;
       }
 
@@ -121,7 +121,7 @@ themes:
       <br/>
 
       {% for theme in page.themes %}
-        <div class="theme" id="{{ theme | downcase }}">
+        <div class="theme {% if forloop.index == 1 %}active{% endif %}" theme="{{ theme | downcase }}">
           {% for style in page.styles %}
             <h3>Style: `{{ style }}`</h3>
 
@@ -153,18 +153,26 @@ themes:
     </div>
 
     <script>
+      function toggle (anchor) {
+        var target = '[theme=' + anchor.replace('#', '') + ']'
+
+        document.querySelector('[theme].active').classList.toggle('active')
+        document.querySelector(target).classList.toggle('active')
+      }
+
       var links = Array.from(document.querySelectorAll('a[href^="#"]'))
 
       links.forEach(function (link) {
         link.addEventListener('click', function (event) {
           event.preventDefault()
           history.pushState({}, '', link.href)
-          history.pushState({}, '', link.href)
-          history.back()
+          toggle(link.getAttribute('href'))
         })
       })
 
-      if (!['#square', '#flat', '#plastic'].indexOf(location.hash) > -1) history.pushState({}, '', '#square')
+      if (['#square', '#flat', '#plastic'].indexOf(location.hash) > -1) {
+        toggle(location.hash)
+      }
     </script>
   </body>
 </html>
