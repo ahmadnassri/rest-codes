@@ -15,6 +15,9 @@ const ctx = canvas.getContext('2d')
 
 ctx.font = '11px Verdana'
 
+// three types of templates are available
+const types = ['full', 'code', 'reason', 'dark']
+
 // loop through all status codes
 Object.keys(statuses).forEach(code => {
   // 1xx, 2xx, etc ...
@@ -38,18 +41,20 @@ Object.keys(statuses).forEach(code => {
 
   // loop through all available templates
   Object.keys(templates).forEach(name => {
-    // two type of templates as expected
-    const types = ['full', 'code']
 
     // output paths
     const files = {
       code: join(__dirname, 'docs', name , 'code', code),
+      reason: join(__dirname, 'docs', name , 'reason', code),
+      dark: join(__dirname, 'docs', name , 'dark', code),
       full: join(__dirname, 'docs', name , 'full', code)
     }
 
     // construct svg content
     const content = {
       code: templates[name].code(status, width),
+      reason: templates[name].reason(status, width),
+      dark: templates[name].full(status, width, true),
       full: templates[name].full(status, width)
     }
 
