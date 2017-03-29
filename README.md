@@ -6,15 +6,20 @@
 
 View the full gallery [here](https://rest.codes)
 
-![](https://rest.codes/square/code/200.svg)
-![](https://rest.codes/square/code/301.svg)
-![](https://rest.codes/square/code/400.svg)
-![](https://rest.codes/square/code/500.svg)
+![](https://rest.codes/flat/code/200.svg)
+![](https://rest.codes/flat/code/301.svg)
+![](https://rest.codes/flat/code/400.svg)
+![](https://rest.codes/flat/code/500.svg)
 
-![](https://rest.codes/square/full/200.svg)
-![](https://rest.codes/square/full/301.svg)
-![](https://rest.codes/square/full/400.svg)
-![](https://rest.codes/square/full/500.svg)
+![](https://rest.codes/flat/square/200.svg)
+![](https://rest.codes/flat/square/301.svg)
+![](https://rest.codes/flat/square/400.svg)
+![](https://rest.codes/flat/square/500.svg)
+
+![](https://rest.codes/flat/full/200.svg)
+![](https://rest.codes/flat/full/301.svg)
+![](https://rest.codes/flat/full/400.svg)
+![](https://rest.codes/flat/full/500.svg)
 
 ## Usage
 
@@ -25,8 +30,9 @@ https://rest.codes/<theme>/<style>/<code>.<svg|png>
 ###### Example
 
 ```html
-<img src="https://rest.codes/square/code/403.svg"/>
-<img src="https://rest.codes/flat/full/502.png"/>
+<img src="https://rest.codes/flat/code/403.svg"/>
+<img src="https://rest.codes/rounded/full/502.png"/>
+<img src="https://rest.codes/plastic/code/403.svg"/>
 ```
 
 

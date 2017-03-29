@@ -15,9 +15,6 @@ const ctx = canvas.getContext('2d')
 
 ctx.font = '11px Verdana'
 
-// three types of templates are available
-const types = ['full', 'code', 'reason', 'dark']
-
 // loop through all status codes
 Object.keys(statuses).forEach(code => {
   // 1xx, 2xx, etc ...
@@ -41,24 +38,29 @@ Object.keys(statuses).forEach(code => {
 
   // loop through all available templates
   Object.keys(templates).forEach(name => {
+    const template = templates[name]
 
     // output paths
     const files = {
       code: join(__dirname, 'docs', name , 'code', code),
-      reason: join(__dirname, 'docs', name , 'reason', code),
       dark: join(__dirname, 'docs', name , 'dark', code),
-      full: join(__dirname, 'docs', name , 'full', code)
+      full: join(__dirname, 'docs', name , 'full', code),
+      reason: join(__dirname, 'docs', name , 'reason', code),
+      square: join(__dirname, 'docs', name , 'square', code)
     }
 
     // construct svg content
     const content = {
-      code: templates[name].code(status, width),
-      reason: templates[name].reason(status, width),
-      dark: templates[name].full(status, width, true),
-      full: templates[name].full(status, width)
+      code: template.code ? template.code(status, width) : false,
+      dark: template.full ? template.full(status, width, true) : false,
+      full: template.full ? template.full(status, width) : false,
+      reason: template.reason ? template.reason(status, width) : false,
+      square: template.square ? template.square(status, width) : false
     }
 
-    types.forEach(type => {
+    Object.keys(content).forEach(type => {
+      if (!content[type]) return
+
       // write svg to disk
       writeFile(`${files[type]}.svg`, content[type], () => {
         // create SVG render instance
@@ -66,9 +68,9 @@ Object.keys(statuses).forEach(code => {
 
         svg.on('finish', () => {
           const png = {
-            height: 20,
             format: 'png',
-            width: type === 'code' ? width.code : width.code + width.reason
+            height: type === 'square' ? width.code : 20,
+            width: ['square', 'code'].includes(type) ? width.code : width.code + width.reason
           }
 
           // write png to disk

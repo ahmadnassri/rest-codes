@@ -23,6 +23,31 @@ exports.code = function (status, width) {
   </svg>`
 }
 
+exports.square = function (status, width) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${ width.code }" height="${ width.code }">
+    <linearGradient id="smooth" x2="0" y2="100%">
+      <stop offset="0"  stop-color="#fff" stop-opacity=".7"/>
+      <stop offset=".1" stop-color="#aaa" stop-opacity=".1"/>
+      <stop offset=".9" stop-color="#000" stop-opacity=".3"/>
+      <stop offset="1"  stop-color="#000" stop-opacity=".5"/>
+    </linearGradient>
+
+    <clipPath id="round">
+      <rect width="${ width.code }" height="${ width.code }" rx="4" fill="#fff"/>
+    </clipPath>
+
+    <g clip-path="url(#round)">
+      <rect width="${ width.code }" height="${ width.code }" fill="${ status.color }"/>
+      <rect width="${ width.code }" height="${ width.code }" fill="url(#smooth)"/>
+    </g>
+
+    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+      <text x="${ width.code / 2 + 1 }" y="${ width.code / 2 + 5}" fill="#010101" fill-opacity=".3">${ status.code }</text>
+      <text x="${ width.code / 2 + 1 }" y="${ width.code / 2 + 4}">${ status.code }</text>
+    </g>
+  </svg>`
+}
+
 exports.reason = function (status, width) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ width.reason }" height="18">
     <linearGradient id="smooth" x2="0" y2="100%">

@@ -1,14 +1,16 @@
 ---
 styles:
   - code
+  - square
   - reason
   - full
   - dark
 
 themes:
-  - Square
   - Flat
+  - Rounded
   - Plastic
+  - Square
 ---
 <!DOCTYPE html>
 <html>
@@ -19,7 +21,7 @@ themes:
 
     <title>HTTP Status Code Badges</title>
     <meta name="description" content="Automatically generated HTTP Status Code badges for your API documentation, CDN delivery through Cloudflare, 100% Open Source"/>
-    <link rel="shortcut icon" href="/square/code/200.png"/>
+    <link rel="shortcut icon" href="/flat/square/200.png"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.7.7/hack.css"/>
     <style>
@@ -98,11 +100,11 @@ themes:
 
       <p>The following:</p>
 
-      <pre>&lt;img src="https://rest.codes/square/code/403.svg"/&gt;&#10;&#10;&lt;img src="https://rest.codes/flat/full/502.png"/&gt;</pre>
+      <pre>&lt;img src="https://rest.codes/square/code/403.svg"/&gt;&#10;&#10;&lt;img src="https://rest.codes/rounded/full/502.png"/&gt;</pre>
 
       <p>Will Produce:</p>
 
-      <pre>&lt;img src="<img class="demo" src="square/code/403.svg"/>"/&gt;&#10;&#10;&lt;img src="<img class="demo" src="flat/full/502.png"/>"/&gt;</pre>
+      <pre>&lt;img src="<img class="demo" src="square/code/403.svg"/>"/&gt;&#10;&#10;&lt;img src="<img class="demo" src="rounded/full/502.png"/>"/&gt;</pre>
 
       <br/>
 
@@ -113,8 +115,8 @@ themes:
       <h2>Themes</h2>
 
       <div>
-        <a class="btn btn-default btn-ghost" href="#square"><img src="square/code/200.svg"/> Square</a>
         <a class="btn btn-default btn-ghost" href="#flat"><img src="flat/code/200.svg"/> Flat</a>
+        <a class="btn btn-default btn-ghost" href="#rounded"><img src="rounded/code/200.svg"/> Rounded</a>
         <a class="btn btn-default btn-ghost" href="#plastic"><img src="plastic/code/200.svg" height="20"/> Plastic</a>
       </div>
 
@@ -128,7 +130,7 @@ themes:
             <pre>https://rest.codes/{{ theme | downcase }}/{{ style }}/&lt;code&gt;.svg</pre>
 
             <div class="grid">
-              {% for status in site.data.statuses %}<div class="cell {% if style == 'code' %}-1of12{% elsif style == 'reason' %}-3of12{% else %}-4of12{% endif %}"><img title="/{{ theme | downcase }}/{{ style }}/{{ status[0] }}" src="{{ theme | downcase }}/{{ style }}/{{ status[0] }}.svg"/></div>{% endfor %}
+              {% for status in site.data.statuses %}<div class="cell {% if style == 'code' or style == 'square' %}-1of12{% elsif style == 'reason' %}-3of12{% else %}-4of12{% endif %}"><img title="/{{ theme | downcase }}/{{ style }}/{{ status[0] }}" src="{{ theme | downcase }}/{{ style }}/{{ status[0] }}.svg"/></div>{% endfor %}
             </div>
 
             <br/>
@@ -164,7 +166,7 @@ themes:
         })
       })
 
-      if (['#square', '#flat', '#plastic'].indexOf(location.hash) > -1) {
+      if (['#square', '#rounded', '#plastic'].indexOf(location.hash) > -1) {
         toggle(location.hash)
       }
     </script>

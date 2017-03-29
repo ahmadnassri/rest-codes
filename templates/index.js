@@ -1,3 +1,4 @@
 exports['flat'] = require('./flat')
-exports['square'] = require('./square')
 exports['plastic'] = require('./plastic')
+exports['rounded'] = require('./rounded')
+exports['square'] = require('./square')
