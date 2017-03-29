@@ -3,12 +3,12 @@
 > Automatically generated HTTP Status Code badges for your API documentation, CDN delivery through Cloudflare, Open Source
 
 ![](https://rest.codes/square/code/200.svg)
-![](https://rest.codes/square/code/300.svg)
+![](https://rest.codes/square/code/301.svg)
 ![](https://rest.codes/square/code/400.svg)
 ![](https://rest.codes/square/code/500.svg)
 
 ![](https://rest.codes/square/full/200.svg)
-![](https://rest.codes/square/full/300.svg)
+![](https://rest.codes/square/full/301.svg)
 ![](https://rest.codes/square/full/400.svg)
 ![](https://rest.codes/square/full/500.svg)
 
