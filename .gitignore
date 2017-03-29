@@ -1,4 +1,4 @@
 *.log
-/_site
+_site
 /node_modules
 /.nyc_output

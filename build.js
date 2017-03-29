@@ -32,15 +32,15 @@ Object.keys(statuses).forEach(code => {
 
   // calculate text width with canvas
   const width = {
-    code: ctx.measureText(status.code).width + 10,
-    reason: ctx.measureText(status.reason).width + 10
+    code: Math.floor(ctx.measureText(status.code).width) + 10,
+    reason: Math.floor(ctx.measureText(status.reason).width) + 10
   }
 
   // loop through all available templates
   Object.keys(templates).forEach(name => {
     // two type of templates as expected
     const types = ['full', 'code']
-    
+
     // output paths
     const files = {
       code: join(__dirname, 'docs', name , 'code', code),
@@ -52,7 +52,7 @@ Object.keys(statuses).forEach(code => {
       code: templates[name].code(status, width),
       full: templates[name].full(status, width)
     }
-    
+
     types.forEach(type => {
       // write svg to disk
       writeFile(`${files[type]}.svg`, content[type], () => {
