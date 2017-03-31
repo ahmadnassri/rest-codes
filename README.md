@@ -29,12 +29,11 @@ https://rest.codes/<theme>/<style>/<code>.<svg|png>
 
 ###### Example
 
-```html
-<img src="https://rest.codes/flat/code/403.svg"/>
-<img src="https://rest.codes/rounded/full/502.png"/>
-<img src="https://rest.codes/plastic/code/403.svg"/>
-```
-
+link                                        | result                            
+------------------------------------------- | ----------------------------------
+`https://rest.codes/flat/code/403.svg`      | ![](https://rest.codes/flat/code/403.svg)     
+`https://rest.codes/plastic/full/501.svg`   | ![](https://rest.codes/plastic/full/501.svg)  
+`https://rest.codes/rounded/square/302.svg` | ![](https://rest.codes/rounded/square/302.svg)
 
 ## Contributing
 
