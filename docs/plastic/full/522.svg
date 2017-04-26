@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="167" height="18">
+    <linearGradient id="smooth" x2="0" y2="100%">
+      <stop offset="0"  stop-color="#fff" stop-opacity=".7"/>
+      <stop offset=".1" stop-color="#aaa" stop-opacity=".1"/>
+      <stop offset=".9" stop-color="#000" stop-opacity=".3"/>
+      <stop offset="1"  stop-color="#000" stop-opacity=".5"/>
+    </linearGradient>
+
+    <clipPath id="round">
+      <rect width="167" height="18" rx="4" fill="#fff"/>
+    </clipPath>
+
+    <g clip-path="url(#round)">
+      <rect width="31" height="18" fill="#555"/>
+      <rect x="31" width="136" height="18" fill="#e05d44"/>
+      <rect width="167" height="18" fill="url(#smooth)"/>
+    </g>
+
+    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+      <text x="16.5" y="14" fill="#010101" fill-opacity=".3">522</text>
+      <text x="16.5" y="13">522</text>
+      <text x="98" y="14" fill="#010101" fill-opacity=".3">Connection Timed Out</text>
+      <text x="98" y="13">Connection Timed Out</text>
+    </g>
+  </svg>

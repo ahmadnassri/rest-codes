@@ -2,6 +2,7 @@
   "100": "Continue",
   "101": "Switching Protocols",
   "102": "Processing",
+  "103": "Checkpoint",
 
   "200": "OK",
   "201": "Created",
@@ -12,7 +13,6 @@
   "206": "Partial Content",
   "207": "Multi-Status",
   "208": "Already Reported",
-
   "226": "IM Used",
 
   "300": "Multiple Choices",
@@ -21,6 +21,7 @@
   "303": "See Other",
   "304": "Not Modified",
   "305": "Use Proxy",
+  "306": "Switch Proxy",
   "307": "Temporary Redirect",
   "308": "Permanent Redirect",
 
@@ -43,20 +44,21 @@
   "416": "Range Not Satisfiable",
   "417": "Expectation Failed",
   "418": "I'm a teapot",
-
+  "420": "Enhance Your Calm",
   "421": "Misdirected Request",
   "422": "Unprocessable Entity",
   "423": "Locked",
   "424": "Failed Dependency",
-
   "426": "Upgrade Required",
-
   "428": "Precondition Required",
   "429": "Too Many Requests",
-
   "431": "Request Header Fields Too Large",
-
+  "444": "No Response",
   "451": "Unavailable For Legal Reasons",
+  "495": "SSL Certificate Error",
+  "496": "SSL Certificate Required",
+  "497": "HTTP Request Sent to HTTPS Port",
+  "499": "Client Closed Request",
 
   "500": "Internal Server Error",
   "501": "Not Implemented",
@@ -67,7 +69,16 @@
   "506": "Variant Also Negotiates",
   "507": "Insufficient Storage",
   "508": "Loop Detected",
-
+  "509": "Bandwidth Limit Exceeded",
   "510": "Not Extended",
-  "511": "Network Authentication Required"
+  "511": "Network Authentication Required",
+  "520": "Unknown Error",
+  "521": "Web Server Is Down",
+  "522": "Connection Timed Out",
+  "523": "Origin Is Unreachable",
+  "524": "A Timeout Occurred",
+  "525": "SSL Handshake Failed",
+  "526": "Invalid SSL Certificate",
+  "598": "Network read timeout",
+  "599": "Network connect timeout"
 }
