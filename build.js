@@ -69,8 +69,23 @@ Object.keys(statuses).forEach(code => {
         svg.on('finish', () => {
           const png = {
             format: 'png',
-            height: type === 'square' ? width.code : 20,
-            width: ['square', 'code'].includes(type) ? width.code : width.code + width.reason
+            height: 20
+          }
+
+          switch (type) {
+            case 'square':
+              png.height = width.code
+
+            case 'code':
+              png.width = width.code
+              break;
+
+            case 'reason':
+              png.width = width.reason
+              break;
+
+            default:
+              png.width = width.code + width.reason
           }
 
           // write png to disk
