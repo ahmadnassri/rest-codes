@@ -17,7 +17,7 @@
     "url": "https://github.com/ahmadnassri/rest-codes/issues"
   },
   "dependencies": {
-    "canvas": "^1.6.5",
+    "canvas": "^2.0.0",
     "librsvg": "^0.7.0"
   }
 }
